@@ -13,14 +13,7 @@ page_soup = soup(page_html, "html.parser") #parsing html page_html
 #week_news = page_soup.findAll("div", {"class":"col-main", "id":"my-teams-table"})
 week_news = page_soup.findAll("table", {"cellspacing":"1", "cellpadding":"3", "class":"tablehead"})
 
-x = 1
-while x < len(week_news[0].text):
-	if week_news[0].text[x-1] == '7':
-		print()
-		x+=1
-	else:
-		print(week_news[0].text[x-1], end="")
-		x+=1
+print(week_news[0].text)
 
 
 
